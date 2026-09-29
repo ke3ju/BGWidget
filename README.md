@@ -26,6 +26,42 @@ Example BGWidget display with the current reading, recent glucose history, 90-da
 - Supports placement on a selected monitor or mirrored widgets across all monitors.
 - Writes `BGWidget_A1c.log` when the long-term calculation runs, containing diagnostic information about the data used.
 
+## Configure Juggluco
+
+BGWidget gets its glucose data from Juggluco's built-in HTTP web server.
+
+On the phone running Juggluco:
+
+1. Open Juggluco.
+2. Open the left menu.
+3. Go to:
+   Settings → Exchange data → Web server
+4. Enable the Web server.
+5. Make sure `Local only` is NOT enabled if BGWidget will run on another computer on your network.
+
+Juggluco's HTTP server uses port:
+
+17580
+
+Find the IP address of the phone, then test it from a web browser on the PC:
+
+http://PHONE_IP:17580/x/stream?header
+
+For example:
+
+http://192.168.1.50:17580/x/stream?header
+
+If Juggluco is configured correctly and the PC can reach the phone, the browser should display glucose stream data.
+
+Then configure BGWidget:
+
+[Main]
+DataPath=http://PHONE_IP:17580
+
+BGWidget adds the required `/x/stream` request automatically.
+
+If you use a VPN such as WireGuard to reach the phone remotely, use the phone's VPN IP address instead of its local Wi-Fi address.
+
 ## Requirements
 
 - Windows
