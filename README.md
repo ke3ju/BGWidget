@@ -4,6 +4,12 @@ BGWidget is a lightweight Windows desktop blood-glucose widget written in **Visu
 
 The source in this repository is the working VB6 project, with the shared class paths adjusted only so the repository is self-contained when cloned.
 
+## Screenshot
+
+![BGWidget displaying current glucose, history graph, average glucose, estimated HbA1c, record span, and reading age](docs/images/BGWidget.png)
+
+Example BGWidget display with the current reading, recent glucose history, 90-day average glucose, estimated HbA1c, total days of records, and last-reading age.
+
 ## Features
 
 - Reads Juggluco data from the `/x/stream` endpoint.
@@ -43,6 +49,9 @@ BGWidget/
 |-- SharedClasses/
 |   |-- INIFile.cls
 |   `-- ReadWrite.cls
+|-- docs/
+|   `-- images/
+|       `-- BGWidget.png
 |-- BGWidget.example.ini
 |-- .gitignore
 `-- README.md
