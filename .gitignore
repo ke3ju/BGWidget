@@ -9,6 +9,7 @@
 *.oca
 *.scc
 MSSCCPRJ.SCC
+BGWidget.zip
 
 # BGWidget local configuration and diagnostics
 BGWidget.ini
