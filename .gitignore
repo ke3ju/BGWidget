@@ -1,0 +1,28 @@
+# VB6 workspace / build output
+*.vbw
+*.exe
+*.dll
+*.obj
+*.pdb
+*.exp
+*.lib
+*.oca
+*.scc
+MSSCCPRJ.SCC
+
+# BGWidget local configuration and diagnostics
+BGWidget.ini
+BGWidget_A1c.log
+*.log
+
+# Temporary / backup files
+*.tmp
+*.bak
+*.old
+~$*
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
